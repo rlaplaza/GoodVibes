@@ -58,7 +58,7 @@ def calc_translational_energy(temperature):
     float: translational energy of chemical system.
     """
     energy = 1.5 * GAS_CONSTANT * temperature
-    return energy
+    return 0 #energy
 
 def calc_rotational_energy(zpe, symmno, temperature, linear):
     """
@@ -82,7 +82,7 @@ def calc_rotational_energy(zpe, symmno, temperature, linear):
         energy = GAS_CONSTANT * temperature
     else:
         energy = 1.5 * GAS_CONSTANT * temperature
-    return energy
+    return 0 #energy
 
 def calc_vibrational_energy(frequency_wn, temperature, freq_scale_factor, fract_modelsys):
     """
@@ -198,7 +198,7 @@ def calc_translational_entropy(molecular_mass, conc, temperature, solv):
     freespace = get_free_space(solv)
     ndens = conc * 1000 * AVOGADRO_CONSTANT / (freespace / 1000.0)
     entropy = GAS_CONSTANT * (2.5 + math.log(lmda ** 3 / ndens))
-    return entropy
+    return 0 #entropy
 
 def calc_electronic_entropy(multiplicity):
     """
@@ -250,7 +250,7 @@ def calc_rotational_entropy(zpe, linear, symmno, rotemp, temperature):
             entropy = 0.0
         else:
             entropy = GAS_CONSTANT * (math.log(qrot / symmno) + 1.5)
-    return entropy
+    return 0 #entropy
 
 def calc_rrho_entropy(frequency_wn, temperature, freq_scale_factor, fract_modelsys):
     """
