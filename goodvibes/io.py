@@ -231,6 +231,8 @@ def parse_data(file):
             ccdata = ccread(possible_filename)
     if data is None:
         raise ValueError("File {} does not exist".format(file))
+    if ccdata is None:
+        raise ValueError("File {} could not be parsed by cclib".format(file))
 
     for line in data:
         if "Gaussian" in line:
