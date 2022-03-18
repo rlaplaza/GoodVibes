@@ -3,9 +3,11 @@ from __future__ import print_function, absolute_import
 
 import os.path
 import numpy as np
-
+import cclib
 from cclib.io import ccread
 from cclib.parser.utils import convertor
+
+print(f"cclib version is {cclib.__version__}")
 
 # PHYSICAL CONSTANTS                                      UNITS
 KCAL_TO_AU = 627.509541  # UNIT CONVERSION
